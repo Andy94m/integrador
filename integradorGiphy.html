@@ -5,12 +5,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GiphyOK</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="js/integrador.css">
+    <script src="bootstrap/js/bootstrap.js"></script>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/integrador.js"></script>
 </head>
 <body>
     <input type="text" id="input">
-    <button onclick = "mostrarGif ()">GIF!</button><br>
+
+    <button onclick= "mostrarGif ()" type="button" class="btn btn-secondary">Giphy!</button>
+
+    <div class="offcanvas offcanvas-start" id="demo">
+        <div class="offcanvas-header">
+          <h2 class="offcanvas-title">Deje su mensaje y nos contactaremos a la brevedad</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <label for="">Nombre:</label>
+            <input type="text" name="nombre" id="name" required><br>
+            <label for="">Apellido:</label>
+            <input type="text" name="apellido" id="lastname" required><br>
+            <label for="">Localidad: </label>
+            <input type="text" id="localidad"><br>
+            <label for="">Nro de contacto</label>
+            <select name="" id="prefijo"><br><br>
+                <option value="011">011</option>
+                <option value="351">351</option>
+                <option value="261">261</option>
+                <option value="342">342</option>
+                <option value="381">381</option>
+            </select>
+            <input type="number" name="" id="numero" required><br><br>
+            <label for="">Email: </label>
+            <input type="email" name="email" id="email"><br><br>
+            
+            <label for="">Coloque su mensaje aqui</label><br>
+        <textarea name="obs" id="" cols="30" rows="10" id="textarea"></textarea> <br>
+
+          <a class="btn btn-success">Enviar</a>
+        </div>
+      </div>
+      
+      <div class="container-fluid mt-3">
+        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+          Contacto
+        </button> <br>
+
+    <div class = "container" id = "listarGif"></div> <br>
 
 </body>
 </html>
